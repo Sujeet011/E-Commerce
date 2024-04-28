@@ -44,16 +44,14 @@ async function fetchFilteredProducts() {
 function displayProducts(products) {
     const productContainer = document.getElementById("product-container");
 
-    // Check if products.data is an array
     if (!Array.isArray(products.data)) {
         console.error("Products data is not an array:", products);
-        return; // Exit the function early if products.data is not an array
+        return; 
     }
 
-    // Clear previous products
+ 
     productContainer.innerHTML = "";
 
-    // Iterate over each product and create a card for it
     products.data.forEach(product => {
         const card = document.createElement("div");
         card.classList.add("card");
